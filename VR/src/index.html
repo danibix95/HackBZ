@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<a-scene id="scene">
+    <a-assets>
+        <!--<img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">-->
+        <!--<img id="city" crossorigin="anonymous" src="http://collegio.sdbtrento.it/images/cus2.jpg">-->
+        <!--<a-assets-item id="brun" src="https://cert.provinz.bz.it/services/kksSearch/image?file=B1855.jpg&mus=SGB&size=l" crossorigin="anonymous"></a-assets-item>-->
+    </a-assets>
+
+    <a-circle position="0 0 0" rotation="-90 0 0" radius="3" src="../textures/WoodFloor16_col.jpg"></a-circle>
+
+    <a-plane position="0 -0.01 -10" rotation="-90 0 90" width="40" height="3.6" src="../textures/WoodFloor16_col.jpg"></a-plane>
+    <a-text position="0 0.1 -2" rotation="-90 0 0" align="center" value="Galleria di Brunico"></a-text>
+
+    <a-box position="0 3 5" rotation="0 180 0" width="4.2" height="4.2" depth="0.1" src="../textures/Wood05_col.jpg"></a-box>
+    <a-text position="0 3 4.9" rotation="0 180 0" value="Brunico, sul Ponte Rienza con la torre Kälberskopf (sulla sinistra) e la Cassa di Risparmio (sulla destra), 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1855, CC BY 4.0"></a-text>
+
+    <a-camera position="0 2 0">
+        <a-cursor></a-cursor>
+    </a-camera>
+
+    <a-sky color="#333333"></a-sky>
+</a-scene>
+<!--<a-scene>-->
+    <!--<a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>-->
+    <!--<a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>-->
+<!--</a-scene>-->
+</body>
+</html>
