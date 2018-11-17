@@ -1,36 +1,36 @@
 
-const pictures = [
+const BrunicoPictures = [
     {
-        imageURL: "../imgs/brunico_1.jpeg",
+        imageURL: "../imgs/brunico_B1855.jpeg",
         description: "Brunico, sul Ponte Rienza con la torre Kälberskopf (sulla sinistra) e la Cassa di Risparmio (sulla destra), 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1855, CC BY 4.0"
     },
     {
-        imageURL: "../imgs/brunico_2.jpeg",
-        description: "Brunico, sul Ponte Rienza con la torre Kälberskopf (sulla sinistra) e la Cassa di Risparmio (sulla destra), 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1855, CC BY 4.0"
+        imageURL: "../imgs/brunico_B3209.jpeg",
+        description: "Veduta di Rio di Pusteria con la Cima di Terento e la chiesa parrocchiale, 1910, Fotografa/o: Sandbichler, Anna, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B3209, CC BY 4.0"
     },
     {
-        imageURL: "../imgs/brunico_1.jpeg",
-        description: "Brunico, sul Ponte Rienza con la torre Kälberskopf (sulla sinistra) e la Cassa di Risparmio (sulla destra), 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1855, CC BY 4.0"
+        imageURL: "../imgs/brunico_B1884.jpeg",
+        description: "Brunico, veduta della Chiesa con Convento delle Orsoline e Porta delle Orsoline, 1905, Fotografa/o: Just, Hermann, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1884, CC BY 4.0"
     },
     {
-        imageURL: "../imgs/brunico_2.jpeg",
-        description: "Brunico, sul Ponte Rienza con la torre Kälberskopf (sulla sinistra) e la Cassa di Risparmio (sulla destra), 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1855, CC BY 4.0"
+        imageURL: "../imgs/brunico_B3744.jpeg",
+        description: "La Caffetteria Ebner e l'Albergo Emma a Villabassa, 1902, Fotografa/o: Stengel & Co., Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B3744, CC BY 4.0"
     },
     {
-        imageURL: "../imgs/brunico_1.jpeg",
-        description: "Brunico, sul Ponte Rienza con la torre Kälberskopf (sulla sinistra) e la Cassa di Risparmio (sulla destra), 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1855, CC BY 4.0"
+        imageURL: "../imgs/brunico_B1645.jpeg",
+        description: "Vista di Brunico sulla Rienza in Val Pusteria, 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1645, CC BY 4.0"
     },
     {
-        imageURL: "../imgs/brunico_2.jpeg",
-        description: "Brunico, sul Ponte Rienza con la torre Kälberskopf (sulla sinistra) e la Cassa di Risparmio (sulla destra), 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1855, CC BY 4.0"
+        imageURL: "../imgs/brunico_B4114.jpeg",
+        description: "Grandhotel Misurina verso le Tre Cime di Lavaredo, 1906, Fotografa/o: Stengel & Co., Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B4114, CC BY 4.0"
     },
     {
-        imageURL: "../imgs/brunico_1.jpeg",
-        description: "Brunico, sul Ponte Rienza con la torre Kälberskopf (sulla sinistra) e la Cassa di Risparmio (sulla destra), 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1855, CC BY 4.0"
+        imageURL: "../imgs/brunico_B2036.jpeg",
+        description: "Teodone, veduta da Brunico con sguardo verso il Sasso Nero, 1910, Fotografa/o: Gerstenberger & Müller, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B2036, CC BY 4.0"
     },
     {
-        imageURL: "../imgs/brunico_2.jpeg",
-        description: "Brunico, sul Ponte Rienza con la torre Kälberskopf (sulla sinistra) e la Cassa di Risparmio (sulla destra), 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1855, CC BY 4.0"
+        imageURL: "../imgs/brunico_B2418.jpeg",
+        description: "Veduta di Bressanone verso Varna, 1900, Fotografa/o: Sconosciuto, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B2418, CC BY 4.0"
     }
 ];
 
@@ -55,9 +55,6 @@ function generatePicture(image, id, description) {
     box.setAttribute("height", "3.6");
     box.setAttribute("depth", "0.1");
     box.setAttribute("src", "../textures/Wood05_col.jpg");
-
-    // <a-box position=  ="4.2" ="4.2" depth="0.1" src="../textures/Wood05_col.jpg"></a-box>
-    // <a-plane position="-2.9 2.5 -7" rotation="0 90 0" width="4" height="3" src="../imgs/brunico_1.jpeg"></a-plane>
 
     let plane = document.createElement("a-plane");
     plane.setAttribute("position", planePos);
@@ -92,9 +89,23 @@ function generatePicture(image, id, description) {
     document.getElementById("scene").appendChild(pictureLigth);
 }
 
+function generateCorridor(segments) {
+    for (let i = 0; i < segments; i++ ) {
+        let corridor = document.createElement("a-plane");
+        corridor.setAttribute("position", `0 0 ${-2-4*i}`);
+        corridor.setAttribute("rotation", "-90 0 90");
+        corridor.setAttribute("width", "4");
+        corridor.setAttribute("height", "4");
+        corridor.setAttribute("material", "shader: standard; src: ../textures/WoodFloor16_col.jpg; normalMap: ../textures/WoodFloor16_nrm.jpg");
+
+        document.getElementById("scene").appendChild(corridor);
+    }
+}
+
 function createGallery() {
+    generateCorridor(7);
     let id = 0;
-    for (let img of pictures) generatePicture(img.imageURL, id++, img.description);
+    for (let img of BrunicoPictures) generatePicture(img.imageURL, id++, img.description);
 }
 
 window.onload = createGallery;
