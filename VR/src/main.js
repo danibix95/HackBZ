@@ -1,6 +1,11 @@
 /* Virtual Tour Data */
-// TODO: move these data to external json file
-// Note: images have been retrieved locally due to CORS issues related to the server of images provider
+
+// Note: before this concept, we explored different ideas and the we also tried to directly download
+// images from url provided by the open data portal.
+// However, we encountered some issues with CORS requests related to the server of images provider.
+// This is the reason why we chose to retrieved locally the images and their description.
+
+// Future work: move these data to external json file and try to adopt the direct download solution
 
 const BrunicoPictures = [
     {

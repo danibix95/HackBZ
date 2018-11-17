@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## Untitled Reality
 
-You can use the [editor on GitHub](https://github.com/danibix95/HackBZ/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is [Alberto](https://github.com/albertoxamin)'s and [mine](https://github.com/danibix95) project we developed at the Vertical Innovation Hacktathon 2018 in Bozen. We focused on a tasks based on the Lichtbild Argento vivo open dataset, eploring what opportunities can provide Augumented Reality and Virtual Reality applied to those open data.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## AR Instagram & Facebook Filters
 
-### Markdown
+## Virtual Tour
+In order to run the Virtual Tour locally, it is necessary to start a simple web server that serve the project page, `index.html`.
+Accordingly, it is possible to exploit `python` to achieve this goal. Indeed, open a terminal in the `VR` folder and run the follwing command:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    python3 -m http.server
 
-```markdown
-Syntax highlighted code block
+Then, oper your browser and visit the following link: (http://localhost:8000/src/index.html)
 
-# Header 1
-## Header 2
-### Header 3
+If you feel tired or you don't know where to start, you can enjoy a running demo at this [link](https://danibix95.github.io/HackBZ/VR/src/index.html).
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/danibix95/HackBZ/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**Note:** all the historical images are provided under Creative Commons licence (see each specific case) by Lichtbild Argento vivo project. Its portal can be found [here](https://www.lichtbild-argentovivo.eu/it/banca-dati-fotografica/archivi.html)
