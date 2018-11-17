@@ -40,11 +40,13 @@ function generatePicture(image, id, description) {
     let planePos = `-2.9 2.5 ${-7 - picturesSpace*Math.floor(id/2)}`;
     let planeRot = "0 90 0";
     let textPos = `-2.8 0.5 ${-5 - picturesSpace*Math.floor(id/2)}`;
+    let lightPos = `-2 3 ${-7 - picturesSpace*Math.floor(id/2)}`;
     if (id % 2 === 0) {
         boxPos = boxPos.slice(1);
         planePos = planePos.slice(1);
         planeRot = "0 -90 0";
         textPos = `2.8 0.5 ${-9 - picturesSpace*Math.floor(id/2)}`;
+        lightPos = lightPos.slice(1);
     }
     let box = document.createElement("a-box");
     box.setAttribute("position", boxPos);
@@ -78,13 +80,16 @@ function generatePicture(image, id, description) {
     text.setAttribute("wrapCount", "7");
 
     let pictureLigth = document.createElement("a-entity");
-    pictureLigth.setAttribute("light", "type: spot; angle: 45");
-    pictureLigth.setAttribute("position", boxPos);
+    pictureLigth.setAttribute("light", "type: spot; angle: 180; intensity: 0.1");
+    pictureLigth.setAttribute("position", lightPos);
+    pictureLigth.setAttribute("castShadow", "true");
+    pictureLigth.setAttribute("shadowCameraVisible", "true");
 
 
     document.getElementById("scene").appendChild(box);
     document.getElementById("scene").appendChild(plane);
     document.getElementById("scene").appendChild(text);
+    document.getElementById("scene").appendChild(pictureLigth);
 }
 
 function createGallery() {
