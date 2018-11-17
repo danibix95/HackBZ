@@ -34,18 +34,21 @@ const pictures = [
     }
 ];
 
+
 function generatePicture(image, id, description) {
     const picturesSpace = 6;
+    const textX = 2.7
+    const textY = 1.3
     let boxPos = `-3 2.5 ${-7 - picturesSpace*Math.floor(id/2)}`;
     let planePos = `-2.9 2.5 ${-7 - picturesSpace*Math.floor(id/2)}`;
     let planeRot = "0 90 0";
-    let textPos = `-2.8 0.5 ${-5 - picturesSpace*Math.floor(id/2)}`;
-    let lightPos = `-2 3 ${-7 - picturesSpace*Math.floor(id/2)}`;
+    let textPos = `-${textX} ${textY} ${-5 - picturesSpace*Math.floor(id/2)}`;
+    let lightPos = `-2 5 ${-7 - picturesSpace*Math.floor(id/2)}`;
     if (id % 2 === 0) {
         boxPos = boxPos.slice(1);
         planePos = planePos.slice(1);
         planeRot = "0 -90 0";
-        textPos = `2.8 0.5 ${-9 - picturesSpace*Math.floor(id/2)}`;
+        textPos = `${textX} ${textY} ${-9 - picturesSpace*Math.floor(id/2)}`;
         lightPos = lightPos.slice(1);
     }
     let box = document.createElement("a-box");
@@ -80,9 +83,16 @@ function generatePicture(image, id, description) {
     text.setAttribute("wrapCount", "7");
 
     let pictureLigth = document.createElement("a-entity");
-    pictureLigth.setAttribute("light", "type: spot; angle: 180; intensity: 0.1");
+    pictureLigth.setAttribute("light", "type: spot; range:60; intensity: 0.1");
+    // pictureLigth.setAttribute("light", "type: point; intensity: 0.1; color:#F00");
+    // if(id%2==0)
+    // pictureLigth.setAttribute("light", "type: point; intensity: 0.1; color:#00F");
     pictureLigth.setAttribute("position", lightPos);
+    pictureLigth.setAttribute("rotation", "-130 -90 -180");
+    if (id%2==0)
+        pictureLigth.setAttribute("rotation", "-130 90 -180");
     pictureLigth.setAttribute("castShadow", "true");
+    pictureLigth.setAttribute("penumbra", "0.170");
     pictureLigth.setAttribute("shadowCameraVisible", "true");
 
 
