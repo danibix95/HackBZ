@@ -6,50 +6,49 @@
     <script src="main.js"></script>
 </head>
 <body>
-<a-scene id="scene">
-    <a-assets>
-        <!--<img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">-->
-        <!--<img id="city" crossorigin="anonymous" src="http://collegio.sdbtrento.it/images/cus2.jpg">-->
-        <!--<a-assets-item id="brun" src="https://cert.provinz.bz.it/services/kksSearch/image?file=B1855.jpg&mus=SGB&size=l" crossorigin="anonymous"></a-assets-item>-->
-    </a-assets>
+    <a-scene id="scene" stats>
+        <a-assets>
+            <a-assets-item id="wood_floor" src="../textures/WoodFloor16_col.jpg"></a-assets-item>
+            <a-assets-item id="wood_floor_nrm" src="../textures/WoodFloor16_nrm.jpg"></a-assets-item>
+            <a-assets-item id="marble" src="../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg"></a-assets-item>
+            <a-assets-item id="marble_occ" src="../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg"></a-assets-item>
+            <a-assets-item id="marble_nrm" src="../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg"></a-assets-item>
+        </a-assets>
 
-    <a-circle position="0 0.001 0" rotation="-90 0 0" radius="3" material="shader: standard; src: ../textures/WoodFloor16_col.jpg; normalMap: ../textures/WoodFloor16_nrm.jpg"></a-circle>
+        <a-circle position="0 0.001 0" rotation="-90 0 0" radius="3" material="shader: standard; src: #wood_floor; normalMap: #wood_floor_nrm"></a-circle>
 
-    <!--Walls & Floors-->
-    <!--North Side-->
-    <a-plane position="0 -0.001 -12.250" rotation="-90 0 90" width="34" height="6.5" material="shader: standard; src: ../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg; ambientOcclusionMap: ../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg; normalMap: ../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg; repeat: 10,2"></a-plane>
-    <a-plane position="-3.25 3.25 -12.250" rotation="0 90 0" width="34" height="6.5" material="shader: standard; src: ../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg; ambientOcclusionMap: ../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg; normalMap: ../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg; repeat: 10,2"></a-plane>
-    <a-plane position="3.25 3.25 -16.250" rotation="0 -90 0" width="26" height="6.5" material="shader: standard; src: ../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg; ambientOcclusionMap: ../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg; normalMap: ../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg; repeat: 8,2"></a-plane>
-    <a-plane position="0 3.25 -29.250" rotation="0 0 0" width="6.5" height="6.5" material="shader: standard; src: ../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg; ambientOcclusionMap: ../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg; normalMap: ../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg; repeat: 1,1"></a-plane>
-    <!--South Side-->
-    <a-plane position="3.25 3.25 4" rotation="0 -90 0" width="1.5" height="6.5" material="shader: standard; src: ../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg; ambientOcclusionMap: ../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg; normalMap: ../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg; repeat: 1,3"></a-plane>
-    <a-plane position="0 3.25 4.750" rotation="0 180 0" width="6.5" height="6.5" material="shader: standard; src: ../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg; ambientOcclusionMap: ../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg; normalMap: ../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg; repeat: 1,1"></a-plane>
-    <!--East Side-->
-    <a-plane position="12 -0.001 0" rotation="-90 0 180" width="24" height="6.5" material="shader: standard; src: ../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg; ambientOcclusionMap: ../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg; normalMap: ../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg; repeat: 7,2"></a-plane>
-    <a-plane position="13.625 3.25 3.25" rotation="0 180 0" width="20.750" height="6.5" material="shader: standard; src: ../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg; ambientOcclusionMap: ../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg; normalMap: ../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg; repeat: 6,2"></a-plane>
-    <a-plane position="13.625 3.25 -3.25" rotation="0 0 0" width="20.750" height="6.5" material="shader: standard; src: ../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg; ambientOcclusionMap: ../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg; normalMap: ../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg; repeat: 6,2"></a-plane>
-    <a-plane position="24 3.25 0" rotation="0 -90 0" width="6.5" height="6.5" material="shader: standard; src: ../textures/marble/StoneMarbleCalacatta004_COL_1K.jpg; ambientOcclusionMap: ../textures/marble/StoneMarbleCalacatta004_GLOSS_1K.jpg; normalMap: ../textures/marble/StoneMarbleCalacatta004_NRM_1K.jpg; repeat: 1,1"></a-plane>
+        <!--Walls & Floors-->
+        <!--North Side-->
+        <a-plane position="0 -0.001 -12.250" rotation="-90 0 90" width="34" height="6.5" material="shader: standard; src: #marble; ambientOcclusionMap: #marble_occ; normalMap: ; repeat: 10,2"></a-plane>
+        <a-plane position="-3.25 3.25 -12.250" rotation="0 90 0" width="34" height="6.5" material="shader: standard; src: #marble; ambientOcclusionMap: #marble_occ; normalMap: #marble_nrm; repeat: 10,2"></a-plane>
+        <a-plane position="3.25 3.25 -16.250" rotation="0 -90 0" width="26" height="6.5" material="shader: standard; src: #marble; ambientOcclusionMap: #marble_occ; normalMap: #marble_nrm; repeat: 8,2"></a-plane>
+        <a-plane position="0 3.25 -29.250" rotation="0 0 0" width="6.5" height="6.5" material="shader: standard; src: #marble; ambientOcclusionMap: #marble_occ; normalMap: #marble_nrm; repeat: 1,1"></a-plane>
+        <!--South Side-->
+        <a-plane position="3.25 3.25 4" rotation="0 -90 0" width="1.5" height="6.5" material="shader: standard; src: #marble; ambientOcclusionMap: #marble_occ; normalMap: #marble_nrm; repeat: 1,3"></a-plane>
+        <a-plane position="0 3.25 4.750" rotation="0 180 0" width="6.5" height="6.5" material="shader: standard; src: #marble; ambientOcclusionMap: #marble_occ; normalMap: #marble_nrm; repeat: 1,1"></a-plane>
+        <!--East Side-->
+        <a-plane position="12 -0.001 0" rotation="-90 0 180" width="24" height="6.5" material="shader: standard; src: #marble; ambientOcclusionMap: #marble_occ; normalMap: #marble_nrm; repeat: 7,2"></a-plane>
+        <a-plane position="13.625 3.25 3.25" rotation="0 180 0" width="20.750" height="6.5" material="shader: standard; src: #marble; ambientOcclusionMap: #marble_occ; normalMap: #marble_nrm; repeat: 6,2"></a-plane>
+        <a-plane position="13.625 3.25 -3.25" rotation="0 0 0" width="20.750" height="6.5" material="shader: standard; src: #marble; ambientOcclusionMap: #marble_occ; normalMap: #marble_nrm; repeat: 6,2"></a-plane>
+        <a-plane position="24 3.25 0" rotation="0 -90 0" width="6.5" height="6.5" material="shader: standard; src: #marble; ambientOcclusionMap: #marble_occ; normalMap: #marble_nrm; repeat: 1,1"></a-plane>
 
-    <!--Signs-->
-    <a-text position="0 0.1 -2" rotation="-90 0 0" align="center" value="Citta' di Brunico"></a-text>
-    <a-text position="2 0.1 0" rotation="-90 -90 0" align="center" value="Collezione Lisl Gaggl-Meirer"></a-text>
+        <!--Signs-->
+        <a-text position="0 0.1 -2" rotation="-90 0 0" align="center" value="Citta' di Brunico"></a-text>
+        <a-text position="2 0.1 0" rotation="-90 -90 0" align="center" value="Collezione Lisl Gaggl-Meirer"></a-text>
 
-    <!--Project Sponsor-->
-    <a-box position="0 3 4.5" rotation="0 180 0" width="4.2" height="4.2" depth="0.1" src="../textures/Wood05_col.jpg"></a-box>
-    <a-plane position="0 3 4.325" rotation="0 180 0" width="4" height="1.8" depth="0.1" src="../imgs/logo.jpg"></a-plane>
-    <!--<a-text position="0 3 4.9" rotation="0 180 0" value="Brunico, sul Ponte Rienza con la torre Kälberskopf (sulla sinistra) e la Cassa di Risparmio (sulla destra), 1910, Fotografa/o: Werth, Josef, Collezione Monika Weissteiner, Archivio storico di Brunico, Città di Brunico, B1855, CC BY 4.0"></a-text>-->
-    <a-entity light="type: hemisphere; color: #AAA; groundColor: #333333; intensity: 0.5"></a-entity>
-    <a-entity light="type: ambient; color: #CCC"></a-entity>
+        <!--Project Sponsor-->
+        <a-box position="0 3 4.5" rotation="0 180 0" width="4.2" height="4.2" depth="0.1" src="../textures/Wood05_col.jpg"></a-box>
+        <a-plane position="0 3 4.325" rotation="0 180 0" width="4" height="1.8" depth="0.1" src="../imgs/logo.jpg"></a-plane>
 
-    <a-camera position="0 2 0" rotation="90 0 0">
-        <a-cursor></a-cursor>
-    </a-camera>
+        <!--Ambient lights-->
+        <a-entity light="type: hemisphere; color: #AAA; groundColor: #333333; intensity: 0.5"></a-entity>
+        <a-entity light="type: ambient; color: #CCC"></a-entity>
 
-    <a-sky color="#333333"></a-sky>
-</a-scene>
-<!--<a-scene>-->
-    <!--<a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>-->
-    <!--<a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>-->
-<!--</a-scene>-->
+        <a-camera position="0 2 0" rotation="90 0 0">
+            <a-cursor></a-cursor>
+        </a-camera>
+
+        <a-sky color="#333333"></a-sky>
+    </a-scene>
 </body>
 </html>

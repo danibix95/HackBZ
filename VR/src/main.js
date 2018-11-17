@@ -1,5 +1,6 @@
-/* Museum Data */
+/* Virtual Tour Data */
 // TODO: move these data to external json file
+// Note: images have been retrieved locally due to CORS issues related to the server of images provider
 
 const BrunicoPictures = [
     {
